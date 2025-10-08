@@ -19,8 +19,9 @@ import org.testng.annotations.DataProvider;
 @CucumberOptions(
     features = {"classpath:features"},
     glue = {"stepDefinitions"},
-    tags = "",
-    monochrome = true, dryRun = false,
+    tags = "@smoke",
+    monochrome = true,
+    dryRun = true,
     plugin = {
         "pretty", "html:target/reports/cucumber.html",
         "json:target/json-reports/cucumber.json"
