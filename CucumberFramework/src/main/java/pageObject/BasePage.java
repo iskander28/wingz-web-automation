@@ -107,4 +107,13 @@ public class BasePage {
             attempts++;
         }
     }
+
+    public void waitUntilPageLoadIsCompleted(String url){
+        try {
+            Thread.sleep(3000);
+            Assert.assertTrue(getDriver().getCurrentUrl().contains(url));
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e.getMessage());
+        }
+    }
 }
