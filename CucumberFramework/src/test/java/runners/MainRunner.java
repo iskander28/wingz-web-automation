@@ -21,7 +21,7 @@ import org.testng.annotations.DataProvider;
     glue = {"stepDefinitions"},
     tags = "@smoke",
     monochrome = true,
-    dryRun = true,
+    dryRun = false,
     plugin = {
         "pretty", "html:target/reports/cucumber.html",
         "json:target/json-reports/cucumber.json"

@@ -9,10 +9,10 @@ public class MainPage extends BasePage{
     public MainPage() {
         super();
     }
-    @FindBy(xpath = "//button[@data-qa='accept-cta']")
-    public WebElement btnCookieAccept;
-    @FindBy(xpath = "//nav[@aria-label='Breadcrumb']")
-    public WebElement lblBreadcrumbs;
+
+    // Page Objects - Main Page
+    @FindBy(xpath = "//div[@class='login-buttons']/a")
+    public WebElement lnkGetStarted;
 
     public void navigateToMainPage() {navigateToPage(GlobalVars.DEFAULT_WEBSITE_URL);}
 }
