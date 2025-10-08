@@ -1,0 +1,9 @@
+<archetype>
+  <id>CucumberFramework</id>
+  <sources>
+    <source>src/main/java/WingzAutomation.java</source>
+  </sources>
+  <testSources>
+    <source>src/test/java/LoginPageTests.java</source>
+  </testSources>
+</archetype>
