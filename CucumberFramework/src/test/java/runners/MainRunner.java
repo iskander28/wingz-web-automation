@@ -19,7 +19,7 @@ import org.testng.annotations.DataProvider;
 @CucumberOptions(
     features = {"classpath:features"},
     glue = {"stepDefinitions"},
-    tags = "@profile",
+    tags = "@regression",
     monochrome = true,
     dryRun = true,
     plugin = {

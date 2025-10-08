@@ -108,6 +108,10 @@ public class BasePage {
         }
     }
 
+    /**********************************************************************************
+     **CUSTOM METHODS
+     * @throws IOException
+     **********************************************************************************/
     public void waitUntilPageLoadIsCompleted(String url){
         try {
             Thread.sleep(3000);
@@ -115,5 +119,14 @@ public class BasePage {
         } catch (InterruptedException e) {
             throw new RuntimeException(e.getMessage());
         }
+    }
+
+    public String getTextFromElement(WebElement element) {
+        String txtelement = "";
+        this.webdriverWait.until(ExpectedConditions.visibilityOf(element));
+        txtelement = element.getAttribute("value");
+        System.out.println("element text value: " + txtelement);
+
+        return txtelement;
     }
 }
